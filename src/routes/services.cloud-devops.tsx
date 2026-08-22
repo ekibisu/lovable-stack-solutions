@@ -13,6 +13,7 @@ export const Route = createFileRoute("/services/cloud-devops")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/services/cloud-devops" },
     ],
     links: [{ rel: "canonical", href: "/services/cloud-devops" }],

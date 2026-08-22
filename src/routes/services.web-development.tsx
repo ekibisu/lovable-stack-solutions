@@ -13,6 +13,7 @@ export const Route = createFileRoute("/services/web-development")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/services/web-development" },
     ],
     links: [{ rel: "canonical", href: "/services/web-development" }],
