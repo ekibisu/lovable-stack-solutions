@@ -137,8 +137,8 @@ function Index() {
 
       <Section tone="paper-2">
         <Wrap>
-          <SectionHead eyebrow="Services" title="Three practices, one team behind all of them." />
-          <div className="grid gap-9 md:grid-cols-3">
+          <SectionHead eyebrow="Services" title="Four practices, one team behind all of them." />
+          <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-4">
             {practices.map((p) => (
               <ServiceCard key={p.to} to={p.to} tag={p.tag} title={p.title} body={p.body} />
             ))}

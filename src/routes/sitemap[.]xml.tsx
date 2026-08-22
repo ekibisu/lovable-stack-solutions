@@ -5,6 +5,7 @@ const paths = [
   "/services/ai-automation",
   "/services/cloud-devops",
   "/services/modernization",
+  "/services/web-development",
   "/case-studies/invoice-automation",
   "/about",
   "/contact",

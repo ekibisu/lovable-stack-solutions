@@ -5,7 +5,7 @@ import { Wrap, btnClass } from "./primitives";
 
 const titleBlock = [
   { k: "Firm", v: site.name },
-  { k: "Practice", v: "AI · Cloud · Modernization" },
+  { k: "Practice", v: "AI · Cloud · Modernization · Web" },
   { k: "Status", v: "Accepting new engagements" },
   { k: "Rev", v: "2026.08" },
 ];
