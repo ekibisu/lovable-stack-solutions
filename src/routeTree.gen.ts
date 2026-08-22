@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
+import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const ServicesAiAutomationRoute = ServicesAiAutomationRouteImport.update({
   path: '/services/ai-automation',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesCloudDevopsRoute = ServicesCloudDevopsRouteImport.update({
+  id: '/services/cloud-devops',
+  path: '/services/cloud-devops',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/services/ai-automation'
+  fullPaths: '/' | '/services/ai-automation' | '/services/cloud-devops'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/services/ai-automation'
-  id: '__root__' | '/' | '/services/ai-automation'
+  to: '/' | '/services/ai-automation' | '/services/cloud-devops'
+  id: '__root__' | '/' | '/services/ai-automation' | '/services/cloud-devops'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
+  ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesAiAutomationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/cloud-devops': {
+      id: '/services/cloud-devops'
+      path: '/services/cloud-devops'
+      fullPath: '/services/cloud-devops'
+      preLoaderRoute: typeof ServicesCloudDevopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
+  ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
