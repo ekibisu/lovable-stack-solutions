@@ -115,7 +115,7 @@ function Index() {
       <Section>
         <Wrap>
           <SectionHead eyebrow="What we do" title="Three problems, one accountable team." />
-          <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-9 md:grid-cols-3">
             <Benefit
               num="01"
               title="Automate operational workflows"
@@ -181,7 +181,7 @@ function Index() {
             title="Fixed shapes, so you know what you're buying."
             lede="Every engagement starts small and paid, so the value is proven before the budget grows."
           />
-          <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-9 md:grid-cols-3">
             {engagements.map((e) => (
               <Benefit key={e.title} num={e.num} title={e.title} body={e.body} />
             ))}
