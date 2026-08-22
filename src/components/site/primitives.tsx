@@ -169,7 +169,7 @@ export function ServiceCard({
   body,
   cta = "View the practice →",
 }: {
-  to: string;
+  to: ComponentProps<typeof Link>["to"];
   tag: string;
   title: string;
   body?: string;
