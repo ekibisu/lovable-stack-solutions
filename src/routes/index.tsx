@@ -12,9 +12,8 @@ import {
 } from "@/components/site/primitives";
 import { engagements, practices, site } from "@/content/site";
 
-const title = `${site.name} — AI Automation, Cloud & DevOps, Modernization`;
-const description =
-  "We eliminate manual operations work and modernize legacy systems for logistics, healthcare, and other operations-heavy businesses. 80% less manual invoice entry, proven in production.";
+const title = `${site.name} — AI Automation & Cloud DevOps`;
+const description = site.tagline;
 
 export const Route = createFileRoute("/")({
   head: () => ({
