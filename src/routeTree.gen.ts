@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
 import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
 import { Route as ServicesModernizationRouteImport } from './routes/services.modernization'
@@ -19,6 +20,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesInvoiceAutomationRoute =
+  CaseStudiesInvoiceAutomationRouteImport.update({
+    id: '/case-studies/invoice-automation',
+    path: '/case-studies/invoice-automation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesAiAutomationRoute = ServicesAiAutomationRouteImport.update({
   id: '/services/ai-automation',
   path: '/services/ai-automation',
@@ -37,12 +44,14 @@ const ServicesModernizationRoute = ServicesModernizationRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
@@ -50,6 +59,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
@@ -58,18 +68,21 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
   id:
     | '__root__'
     | '/'
+    | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
@@ -77,6 +90,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
   ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
   ServicesModernizationRoute: typeof ServicesModernizationRoute
@@ -89,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/invoice-automation': {
+      id: '/case-studies/invoice-automation'
+      path: '/case-studies/invoice-automation'
+      fullPath: '/case-studies/invoice-automation'
+      preLoaderRoute: typeof CaseStudiesInvoiceAutomationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/ai-automation': {
@@ -117,6 +138,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CaseStudiesInvoiceAutomationRoute: CaseStudiesInvoiceAutomationRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
   ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
   ServicesModernizationRoute: ServicesModernizationRoute,
