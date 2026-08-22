@@ -1,0 +1,72 @@
+export const site = {
+  name: "JABS Technical Consulting",
+  short: "JABS TECHNICAL",
+  email: "hello@jabstechnical.com",
+  tagline:
+    "AI automation, cloud infrastructure, and full-stack application modernization for operations-heavy businesses.",
+} as const;
+
+export const practices = [
+  {
+    to: "/services/ai-automation",
+    tag: "Practice 01",
+    title: "AI & workflow automation",
+    short: "AI Automation",
+    body: "Document intake, extraction, validation, and approval — automated, with people still signing off.",
+  },
+  {
+    to: "/services/cloud-devops",
+    tag: "Practice 02",
+    title: "Cloud & DevOps reliability",
+    short: "Cloud & DevOps",
+    body: "Architecture, IaC, CI/CD, and security review, with a prioritized 30/60/90-day plan.",
+  },
+  {
+    to: "/services/modernization",
+    tag: "Practice 03",
+    title: "Modernization & full-stack engineering",
+    short: "Modernization",
+    body: "Legacy systems, APIs, and databases modernized in phases, on whatever stack you already run — no risky rewrites.",
+  },
+] as const;
+
+export const engagements = [
+  {
+    num: "Shape 01",
+    title: "Automation assessment — 2 weeks",
+    body: "We map one manual process end to end, prototype the extraction, and hand you a build estimate with an honest go/no-go. Starts at $8k, credited against the build.",
+  },
+  {
+    num: "Shape 02",
+    title: "Reliability review — 30/60/90 plan",
+    body: "Architecture, security, IaC, CI/CD, and cost reviewed, then ranked by impact into a plan your team can execute. Starts at $12k.",
+  },
+  {
+    num: "Shape 03",
+    title: "Phased build & modernization",
+    body: "Monthly engagement for the actual work: pipelines, migrations, services, front ends. Scoped in shippable phases, typically $18k–$40k/month.",
+  },
+] as const;
+
+export const engagementSteps = [
+  {
+    num: "01",
+    title: "Assessment",
+    body: "A 30-minute call, then a short paid assessment on one real process. You get the findings whether or not you hire us for the build.",
+  },
+  {
+    num: "02",
+    title: "Scoped pilot",
+    body: "One narrow slice shipped to production behind human review, so the value is measurable before the budget grows.",
+  },
+  {
+    num: "03",
+    title: "Phased build",
+    body: "We expand coverage in phases you can ship safely — no freeze on the systems your business runs on.",
+  },
+  {
+    num: "04",
+    title: "Handoff",
+    body: "Documentation, infrastructure-as-code, and runbooks handed to your team. We stay only as long as you need us.",
+  },
+] as const;

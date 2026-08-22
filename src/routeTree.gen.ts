@@ -10,33 +10,129 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
+import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
+import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
+import { Route as ServicesModernizationRouteImport } from './routes/services.modernization'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesInvoiceAutomationRoute =
+  CaseStudiesInvoiceAutomationRouteImport.update({
+    id: '/case-studies/invoice-automation',
+    path: '/case-studies/invoice-automation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesAiAutomationRoute = ServicesAiAutomationRouteImport.update({
+  id: '/services/ai-automation',
+  path: '/services/ai-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCloudDevopsRoute = ServicesCloudDevopsRouteImport.update({
+  id: '/services/cloud-devops',
+  path: '/services/cloud-devops',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesModernizationRoute = ServicesModernizationRouteImport.update({
+  id: '/services/modernization',
+  path: '/services/modernization',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/modernization': typeof ServicesModernizationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/modernization': typeof ServicesModernizationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
+  '/services/ai-automation': typeof ServicesAiAutomationRoute
+  '/services/cloud-devops': typeof ServicesCloudDevopsRoute
+  '/services/modernization': typeof ServicesModernizationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/sitemap.xml'
+    | '/case-studies/invoice-automation'
+    | '/services/ai-automation'
+    | '/services/cloud-devops'
+    | '/services/modernization'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/sitemap.xml'
+    | '/case-studies/invoice-automation'
+    | '/services/ai-automation'
+    | '/services/cloud-devops'
+    | '/services/modernization'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/sitemap.xml'
+    | '/case-studies/invoice-automation'
+    | '/services/ai-automation'
+    | '/services/cloud-devops'
+    | '/services/modernization'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
+  ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
+  ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
+  ServicesModernizationRoute: typeof ServicesModernizationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +144,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/invoice-automation': {
+      id: '/case-studies/invoice-automation'
+      path: '/case-studies/invoice-automation'
+      fullPath: '/case-studies/invoice-automation'
+      preLoaderRoute: typeof CaseStudiesInvoiceAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ai-automation': {
+      id: '/services/ai-automation'
+      path: '/services/ai-automation'
+      fullPath: '/services/ai-automation'
+      preLoaderRoute: typeof ServicesAiAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cloud-devops': {
+      id: '/services/cloud-devops'
+      path: '/services/cloud-devops'
+      fullPath: '/services/cloud-devops'
+      preLoaderRoute: typeof ServicesCloudDevopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/modernization': {
+      id: '/services/modernization'
+      path: '/services/modernization'
+      fullPath: '/services/modernization'
+      preLoaderRoute: typeof ServicesModernizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CaseStudiesInvoiceAutomationRoute: CaseStudiesInvoiceAutomationRoute,
+  ServicesAiAutomationRoute: ServicesAiAutomationRoute,
+  ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
+  ServicesModernizationRoute: ServicesModernizationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
