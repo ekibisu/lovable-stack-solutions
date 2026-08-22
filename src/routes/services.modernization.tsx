@@ -14,9 +14,9 @@ export const Route = createFileRoute("/services/modernization")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services/modernization" },
+      { property: "og:url", content: "https://jabstechnicalconsulting.com/services/modernization" },
     ],
-    links: [{ rel: "canonical", href: "/services/modernization" }],
+    links: [{ rel: "canonical", href: "https://jabstechnicalconsulting.com/services/modernization" }],
     scripts: [
       {
         type: "application/ld+json",
