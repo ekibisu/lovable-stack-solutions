@@ -3,7 +3,7 @@ export const site = {
   short: "JABS TECHNICAL",
   email: "hello@jabstechnical.com",
   tagline:
-    "Automation, cloud, and modernization for logistics, healthcare, and other operations-heavy businesses. 80% less manual invoice entry, proven in production.",
+    "We eliminate manual operations work and modernize legacy systems for logistics, healthcare, and other operations-heavy businesses. 80% less manual invoice entry, proven in production.",
 } as const;
 
 export const practices = [
