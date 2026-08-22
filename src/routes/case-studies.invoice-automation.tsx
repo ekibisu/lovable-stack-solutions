@@ -23,9 +23,9 @@ export const Route = createFileRoute("/case-studies/invoice-automation")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "/case-studies/invoice-automation" },
+      { property: "og:url", content: "https://jabstechnicalconsulting.com/case-studies/invoice-automation" },
     ],
-    links: [{ rel: "canonical", href: "/case-studies/invoice-automation" }],
+    links: [{ rel: "canonical", href: "https://jabstechnicalconsulting.com/case-studies/invoice-automation" }],
     scripts: [
       {
         type: "application/ld+json",

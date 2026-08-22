@@ -14,9 +14,9 @@ export const Route = createFileRoute("/services/ai-automation")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services/ai-automation" },
+      { property: "og:url", content: "https://jabstechnicalconsulting.com/services/ai-automation" },
     ],
-    links: [{ rel: "canonical", href: "/services/ai-automation" }],
+    links: [{ rel: "canonical", href: "https://jabstechnicalconsulting.com/services/ai-automation" }],
     scripts: [
       {
         type: "application/ld+json",
