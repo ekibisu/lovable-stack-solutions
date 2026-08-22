@@ -17,6 +17,7 @@ import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
 import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
 import { Route as ServicesModernizationRouteImport } from './routes/services.modernization'
+import { Route as ServicesWebDevelopmentRouteImport } from './routes/services.web-development'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -59,6 +60,11 @@ const ServicesModernizationRoute = ServicesModernizationRouteImport.update({
   path: '/services/modernization',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWebDevelopmentRoute = ServicesWebDevelopmentRouteImport.update({
+  id: '/services/web-development',
+  path: '/services/web-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -69,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByTo {
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -90,6 +98,7 @@ export interface FileRoutesById {
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -102,6 +111,7 @@ export interface FileRouteTypes {
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
+    | '/services/web-development'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -112,6 +122,7 @@ export interface FileRouteTypes {
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
+    | '/services/web-development'
   id:
     | '__root__'
     | '/'
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/services/ai-automation'
     | '/services/cloud-devops'
     | '/services/modernization'
+    | '/services/web-development'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -133,6 +145,7 @@ export interface RootRouteChildren {
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
   ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
   ServicesModernizationRoute: typeof ServicesModernizationRoute
+  ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -193,6 +206,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesModernizationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/web-development': {
+      id: '/services/web-development'
+      path: '/services/web-development'
+      fullPath: '/services/web-development'
+      preLoaderRoute: typeof ServicesWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -205,6 +225,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
   ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
   ServicesModernizationRoute: ServicesModernizationRoute,
+  ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

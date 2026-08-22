@@ -28,6 +28,13 @@ export const practices = [
     short: "Modernization",
     body: "Legacy systems, APIs, and databases modernized in phases, on whatever stack you already run — no risky rewrites.",
   },
+  {
+    to: "/services/web-development",
+    tag: "Practice 04",
+    title: "Web development & digital presence",
+    short: "Web Development",
+    body: "Websites and internet-facing business applications for walk-in-first businesses — built around how the shop actually runs.",
+  },
 ] as const;
 
 export const engagements = [
