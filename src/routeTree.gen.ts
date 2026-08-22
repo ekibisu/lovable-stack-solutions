@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
 import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
@@ -24,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesInvoiceAutomationRoute =
@@ -51,6 +57,7 @@ const ServicesModernizationRoute = ServicesModernizationRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/contact'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/contact'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/contact'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -103,6 +115,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
   CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
   ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
@@ -123,6 +136,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/invoice-automation': {
@@ -159,6 +179,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
   CaseStudiesInvoiceAutomationRoute: CaseStudiesInvoiceAutomationRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
   ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
