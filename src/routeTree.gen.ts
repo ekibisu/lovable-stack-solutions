@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
 import { Route as ServicesCloudDevopsRouteImport } from './routes/services.cloud-devops'
@@ -30,6 +31,11 @@ const AboutRoute = AboutRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesInvoiceAutomationRoute =
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/sitemap.xml'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/sitemap.xml'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/sitemap.xml'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
     | '/services/cloud-devops'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
   ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
@@ -143,6 +156,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/invoice-automation': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   CaseStudiesInvoiceAutomationRoute: CaseStudiesInvoiceAutomationRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
   ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
