@@ -78,10 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${site.name} — AI Automation, Cloud & Modernization` },
-      { name: "description", content: site.tagline },
       { property: "og:site_name", content: site.name },
-      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
