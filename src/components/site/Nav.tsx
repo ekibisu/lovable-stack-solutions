@@ -29,7 +29,7 @@ export function Nav() {
 
   const links = [
     ...practices.map((p) => ({ to: p.to, label: p.short })),
-    { to: "/case-studies/invoice-automation", label: "Case Study" },
+    { to: "/case-studies", label: "Case Studies" },
     { to: "/about", label: "About" },
   ];
 

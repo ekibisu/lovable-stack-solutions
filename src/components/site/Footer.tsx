@@ -40,10 +40,10 @@ export function Footer() {
               Company
             </h2>
             <Link
-              to="/case-studies/invoice-automation"
+              to="/case-studies"
               className="mb-2.5 block text-sm text-muted-dark transition-colors hover:text-paper"
             >
-              Case study
+              Case studies
             </Link>
             <Link
               to="/about"

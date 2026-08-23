@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesBonVoyageVintageRouteImport } from './routes/case-studies.bon-voyage-vintage'
 import { Route as CaseStudiesClaimsPlatformModernizationRouteImport } from './routes/case-studies.claims-platform-modernization'
 import { Route as CaseStudiesCloudMigrationRouteImport } from './routes/case-studies.cloud-migration'
@@ -40,6 +41,11 @@ const ContactRoute = ContactRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesBonVoyageVintageRoute =
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByTo {
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -129,6 +137,7 @@ export interface FileRoutesById {
   '/services/cloud-devops': typeof ServicesCloudDevopsRoute
   '/services/modernization': typeof ServicesModernizationRoute
   '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -145,6 +154,7 @@ export interface FileRouteTypes {
     | '/services/cloud-devops'
     | '/services/modernization'
     | '/services/web-development'
+    | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/services/cloud-devops'
     | '/services/modernization'
     | '/services/web-development'
+    | '/case-studies'
   id:
     | '__root__'
     | '/'
@@ -173,6 +184,7 @@ export interface FileRouteTypes {
     | '/services/cloud-devops'
     | '/services/modernization'
     | '/services/web-development'
+    | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -188,6 +200,7 @@ export interface RootRouteChildren {
   ServicesCloudDevopsRoute: typeof ServicesCloudDevopsRoute
   ServicesModernizationRoute: typeof ServicesModernizationRoute
   ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/bon-voyage-vintage': {
@@ -293,6 +313,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesCloudDevopsRoute: ServicesCloudDevopsRoute,
   ServicesModernizationRoute: ServicesModernizationRoute,
   ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
