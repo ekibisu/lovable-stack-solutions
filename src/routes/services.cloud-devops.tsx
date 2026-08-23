@@ -63,11 +63,11 @@ const data: ServicePageData = {
   ],
   caseStudy: {
     eyebrow: "Case study",
-    title: "Migrating a billion-dollar transaction platform — and cutting infrastructure cost by 70%",
+    title: "Migrating a high-volume transaction platform to the cloud, with zero downtime",
     items: [
       {
         label: "Challenge",
-        body: "A healthcare payer platform processing over $13B/month ran on aging on-prem infrastructure, with risky deployments and a climbing $7M/year infrastructure bill.",
+        body: "A healthcare payer platform processing a large, continuous volume of transactions ran on aging on-premises infrastructure, with risky deployments and infrastructure spend that had climbed well past what the platform's usage justified.",
       },
       {
         label: "Approach",
@@ -75,15 +75,15 @@ const data: ServicePageData = {
       },
       {
         label: "Result",
-        body: "Cost cut from ~$7M/year to under $2M/year, with zero disruption to a platform processing $13B/month throughout the migration.",
+        body: "Infrastructure spend came down sharply and deployment risk came down with it, with zero disruption to transaction processing throughout the migration. The approach was packaged into a reusable library so other teams could safely onboard to the cloud on their own.",
       },
     ],
     link: { to: "/case-studies/cloud-migration", label: "Read the full case study →" },
   },
   stats: [
-    { value: "70%+", label: "Cost reduction" },
-    { value: "$13B", label: "Monthly volume, zero disruption" },
-    { value: "0", label: "Downtime during migration" },
+    { value: "Zero", label: "Downtime during the migration" },
+    { value: "Full", label: "Transaction volume maintained throughout" },
+    { value: "Self-service", label: "Infrastructure reused by other teams" },
   ],
   cta: {
     title: "Want to know what your cloud setup would look like reviewed honestly?",
