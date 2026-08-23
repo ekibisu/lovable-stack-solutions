@@ -38,6 +38,27 @@ function About() {
         lede="JABS Technical Consulting works with operations-heavy and regulated businesses that need real systems built, not slideware. The people who scope your work are the people who build it."
       />
 
+      <Wrap>
+        <p className="max-w-[860px] font-mono text-[13px] text-muted">
+          Four practices:{" "}
+          <Link to="/services/ai-automation" className="text-markup underline-offset-4 hover:underline">
+            AI &amp; Workflow Automation
+          </Link>
+          {" · "}
+          <Link to="/services/cloud-devops" className="text-markup underline-offset-4 hover:underline">
+            Cloud &amp; DevOps Reliability
+          </Link>
+          {" · "}
+          <Link to="/services/modernization" className="text-markup underline-offset-4 hover:underline">
+            Modernization &amp; Full-Stack Engineering
+          </Link>
+          {" · "}
+          <Link to="/services/web-development" className="text-markup underline-offset-4 hover:underline">
+            Web Development &amp; Digital Presence
+          </Link>
+        </p>
+      </Wrap>
+
       <Section className="pt-0">
         <Wrap>
           <StatPlate
