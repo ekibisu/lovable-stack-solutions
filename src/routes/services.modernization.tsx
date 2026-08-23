@@ -78,6 +78,10 @@ const data: ServicePageData = {
         body: "A supported, testable platform delivered without a feature freeze, and a team able to ship again without waiting on specialists.",
       },
     ],
+    link: {
+      to: "/case-studies/claims-platform-modernization",
+      label: "Read the full case study →",
+    },
   },
   stats: [
     { value: "0", label: "Feature freezes required" },
