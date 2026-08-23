@@ -97,7 +97,8 @@ function Index() {
             </h1>
             <p className="max-w-[640px] text-[19px] text-muted-dark">
               We build AI-powered workflows, secure cloud platforms, and modernized backend systems
-              for logistics, healthcare, and other operations-heavy businesses.
+              for operations-heavy businesses, from enterprise logistics and healthcare platforms to
+              local, walk-in-first shops.
             </p>
             <div className="mt-8 flex flex-wrap gap-3.5">
               <ButtonLink to="/contact" variant="primary">
