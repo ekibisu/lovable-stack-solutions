@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 
 const title = `Case Studies — ${site.name}`;
 const description =
-  "Production engagements in logistics, healthcare, and retail: invoice automation, a billion-dollar platform migration, a claims platform rebuild, and a two-shop vintage store taken online.";
+  "Production engagements in logistics, healthcare, and retail: invoice automation, a zero-downtime cloud migration, a claims platform rebuild, and a two-shop vintage store taken online.";
 
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
@@ -30,9 +30,9 @@ const studies = [
   },
   {
     to: "/case-studies/cloud-migration" as const,
-    tag: "Healthcare · Payments platform",
-    title: "Migrating a billion-dollar transaction platform to the cloud",
-    body: "$13B/month in volume moved, ~$5M/year in cost removed.",
+    tag: "Healthcare · Payer platform",
+    title: "Migrating a high-volume transaction platform to the cloud",
+    body: "Zero downtime, full transaction volume maintained throughout.",
   },
   {
     to: "/case-studies/claims-platform-modernization" as const,
