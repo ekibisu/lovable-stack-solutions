@@ -63,8 +63,8 @@ function About() {
         <Wrap>
           <StatPlate
             stats={[
-              { value: "$13B", label: "Monthly volume platforms supported" },
-              { value: "70%+", label: "Infrastructure cost reduced" },
+              { value: "Zero", label: "Downtime across cloud migrations" },
+              { value: "Self-service", label: "Infrastructure adopted by other teams" },
               { value: "80%", label: "Manual entry eliminated" },
             ]}
           />
