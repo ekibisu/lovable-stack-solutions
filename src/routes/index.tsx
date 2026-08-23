@@ -199,9 +199,9 @@ function Index() {
         <Wrap>
           <SectionHead
             eyebrow="Who we work with"
-            title="Operations-heavy, regulated, or both."
+            title="Operations-heavy, regulated, or built around walk-in customers."
           />
-          <div className="grid gap-7 md:grid-cols-2">
+          <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             <div className="corners border border-paper-2 p-8">
               <Eyebrow>Primary</Eyebrow>
               <h3 className="mb-2 text-[19px]">Logistics, distribution &amp; operations</h3>
@@ -217,6 +217,14 @@ function Index() {
               <p className="text-muted">
                 Payer, provider, insurance, financial services, and other regulated platforms that
                 need to modernize without risking uptime, audit trails, or transaction volume.
+              </p>
+            </div>
+            <div className="corners border border-paper-2 p-8">
+              <Eyebrow>Also a strong fit</Eyebrow>
+              <h3 className="mb-2 text-[19px]">Local &amp; consumer-facing businesses</h3>
+              <p className="text-muted">
+                Retail shops, markets, and event businesses that need a real digital presence and
+                back-office tooling, without turning staff into full-time data-entry clerks.
               </p>
             </div>
           </div>
