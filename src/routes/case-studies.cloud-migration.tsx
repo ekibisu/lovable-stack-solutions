@@ -11,9 +11,9 @@ import {
 } from "@/components/site/primitives";
 import { site } from "@/content/site";
 
-const title = `Case Study: Cloud Migration at $13B/Month, Zero Downtime — ${site.name}`;
+const title = `Case Study: High-Volume Cloud Migration, Zero Downtime — ${site.name}`;
 const description =
-  "How we migrated a healthcare payer platform processing over $13B per month off aging on-prem infrastructure with zero disruption, cutting infrastructure cost from ~$7M/year to under $2M/year.";
+  "How we migrated a healthcare payer platform off aging on-premises infrastructure with zero disruption and zero downtime, using infrastructure-as-code and a reversible, incremental cutover.";
 
 export const Route = createFileRoute("/case-studies/cloud-migration")({
   head: () => ({
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/case-studies/cloud-migration")({
           "@context": "https://schema.org",
           "@type": "Article",
           headline:
-            "Migrating a billion-dollar transaction platform to the cloud with zero disruption",
+            "Migrating a high-volume transaction platform to the cloud, with zero downtime",
           description,
           author: { "@type": "Organization", name: site.name },
         }),
@@ -49,18 +49,18 @@ function CaseStudy() {
       <PageHeader
         tag="Healthcare · Payer platform"
         eyebrow="Case study"
-        title="Migrating a billion-dollar transaction platform — and cutting infrastructure cost by 70%"
-        lede="A healthcare payer platform moving more than $13B a month, lifted off aging on-prem hardware onto reproducible cloud infrastructure without a single disruptive cutover."
+        title="Migrating a high-volume transaction platform to the cloud, with zero downtime"
+        lede="A healthcare payer platform moving a large, continuous volume of transactions, lifted off aging on-prem hardware onto reproducible cloud infrastructure without a single disruptive cutover."
       />
 
       <Section className="pt-0">
         <Wrap>
           <StatPlate
             stats={[
-              { value: "70%+", label: "Infrastructure cost reduction" },
-              { value: "$13B", label: "Monthly volume, uninterrupted" },
-              { value: "0", label: "Downtime during migration" },
-              { value: "$5M", label: "Annual run-rate savings" },
+              { value: "Zero", label: "Downtime during the migration" },
+              { value: "Full", label: "Transaction volume maintained throughout" },
+              { value: "Self-service", label: "Infrastructure reused by other teams" },
+              { value: "Reversible", label: "Every migration step, in minutes" },
             ]}
           />
         </Wrap>
@@ -76,7 +76,7 @@ function CaseStudy() {
             items={[
               {
                 label: "Challenge",
-                body: "The platform processed over $13B/month on aging on-prem infrastructure. Capacity was fixed, hardware refresh cycles were looming, and the environments that were supposed to mirror production had drifted apart over years of manual changes.",
+                body: "The platform processed a large, continuous volume of transactions on aging on-prem infrastructure. Capacity was fixed, hardware refresh cycles were looming, and the environments that were supposed to mirror production had drifted apart over years of manual changes.",
               },
               {
                 label: "Constraint",
@@ -84,7 +84,7 @@ function CaseStudy() {
               },
               {
                 label: "Cost of inaction",
-                body: "Infrastructure spend was climbing past $7M/year, releases required manual coordination and out-of-hours risk, and every new internal team waiting on an environment added weeks to their own delivery timeline.",
+                body: "Infrastructure spend was climbing well past what the platform's usage justified, releases required manual coordination and out-of-hours risk, and every new internal team waiting on an environment added weeks to their own delivery timeline.",
               },
             ]}
           />
@@ -137,8 +137,8 @@ function CaseStudy() {
         <Wrap>
           <SectionHead
             eyebrow="Outcome"
-            title="Cost cut by more than 70% — with nothing taken offline."
-            lede="Infrastructure spend fell from roughly $7M/year to under $2M/year while the platform kept processing $13B a month throughout the migration."
+            title="Infrastructure cost came down sharply — with nothing taken offline."
+            lede="Infrastructure spend came down sharply while the platform kept processing its full transaction volume throughout the migration."
           />
           <ThreeColumnStory
             items={[
@@ -148,7 +148,7 @@ function CaseStudy() {
               },
               {
                 label: "Financially",
-                body: "Roughly $5M a year came out of the run rate, with capacity now tracking actual demand instead of a hardware purchase made years earlier.",
+                body: "Infrastructure spend now tracks actual demand instead of a hardware purchase made years earlier, so the savings compound every year capacity would otherwise have sat idle.",
               },
               {
                 label: "Structurally",
