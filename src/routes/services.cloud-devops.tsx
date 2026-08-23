@@ -78,6 +78,7 @@ const data: ServicePageData = {
         body: "Cost cut from ~$7M/year to under $2M/year, with zero disruption to a platform processing $13B/month throughout the migration.",
       },
     ],
+    link: { to: "/case-studies/cloud-migration", label: "Read the full case study →" },
   },
   stats: [
     { value: "70%+", label: "Cost reduction" },
