@@ -50,8 +50,8 @@ export function Nav() {
       <Wrap className="flex h-20 items-center justify-between">
         <Logo />
         <div className="flex shrink-0 items-center">
-          <span aria-hidden className="mx-12 hidden h-8 w-px bg-paper-2 xl:block" />
-          <nav aria-label="Main" className="hidden items-center gap-8 xl:flex">
+          <span aria-hidden className="mx-10 hidden h-8 w-px bg-paper-2 min-[1180px]:block" />
+          <nav aria-label="Main" className="hidden items-center gap-8 min-[1180px]:flex">
             {links.map((link) => (
               <Link
                 key={link.to}
@@ -63,7 +63,7 @@ export function Nav() {
               </Link>
             ))}
           </nav>
-          <Link to="/contact" className={btnClass("primary", "ml-10 hidden xl:inline-block")}>
+          <Link to="/contact" className={btnClass("primary", "ml-10 hidden min-[1180px]:inline-block")}>
             Book a call
           </Link>
           <button
@@ -71,7 +71,7 @@ export function Nav() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
-            className="border border-ink px-3 py-2 font-mono text-xs uppercase tracking-[0.05em] xl:hidden"
+            className="border border-ink px-3 py-2 font-mono text-xs uppercase tracking-[0.05em] min-[1180px]:hidden"
           >
             {open ? "Close" : "Menu"}
           </button>
@@ -81,7 +81,7 @@ export function Nav() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-paper-2 bg-paper xl:hidden"
+          className="border-t border-paper-2 bg-paper min-[1180px]:hidden"
         >
           <Wrap className="flex flex-col py-4">
             {links.map((link) => (
