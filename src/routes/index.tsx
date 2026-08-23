@@ -199,7 +199,7 @@ function Index() {
         <Wrap>
           <SectionHead
             eyebrow="Who we work with"
-            title="Operations-heavy, regulated, or built around walk-in customers."
+            title="Operations-heavy, regulated, or local and field-based."
           />
           <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             <div className="corners border border-paper-2 p-8">
@@ -221,10 +221,11 @@ function Index() {
             </div>
             <div className="corners border border-paper-2 p-8">
               <Eyebrow>Also a strong fit</Eyebrow>
-              <h3 className="mb-2 text-[19px]">Local &amp; consumer-facing businesses</h3>
+              <h3 className="mb-2 text-[19px]">Local, walk-in &amp; field-service businesses</h3>
               <p className="text-muted">
-                Retail shops, markets, and event businesses that need a real digital presence and
-                back-office tooling, without turning staff into full-time data-entry clerks.
+                Retail shops, markets, event businesses, and trades like plumbing, electrical, and
+                construction — buried in quotes, invoices, and scheduling as much as they need a real
+                online presence.
               </p>
             </div>
           </div>
