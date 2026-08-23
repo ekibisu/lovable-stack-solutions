@@ -7,6 +7,7 @@ const paths = [
   "/services/modernization",
   "/services/web-development",
   "/case-studies/invoice-automation",
+  "/case-studies/cloud-migration",
   "/about",
   "/contact",
 ];

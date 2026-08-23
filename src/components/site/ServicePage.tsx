@@ -1,5 +1,6 @@
 import {
   Benefit,
+  ButtonLink,
   CtaBand,
   PageHeader,
   Section,
@@ -17,7 +18,12 @@ export type ServicePageData = {
   h1: string;
   lede: string;
   pillars: { num: string; title: string; body: string }[];
-  caseStudy: { eyebrow: string; title: string; items: { label: string; body: string }[] };
+  caseStudy: {
+    eyebrow: string;
+    title: string;
+    items: { label: string; body: string }[];
+    link?: { to: string; label: string };
+  };
   stats: { value: string; label: string }[];
   cta: { title: string; label: string };
   extra?: React.ReactNode;
@@ -46,6 +52,13 @@ export function ServicePage({ data }: { data: ServicePageData }) {
         <Wrap>
           <SectionHead eyebrow={data.caseStudy.eyebrow} title={data.caseStudy.title} />
           <ThreeColumnStory items={data.caseStudy.items} />
+          {data.caseStudy.link ? (
+            <div className="mt-9">
+              <ButtonLink to={data.caseStudy.link.to} variant="ghost">
+                {data.caseStudy.link.label}
+              </ButtonLink>
+            </div>
+          ) : null}
         </Wrap>
       </Section>
 
