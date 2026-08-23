@@ -29,6 +29,7 @@ const interests: { value: LeadInput["interest"]; label: string }[] = [
   { value: "ai-automation", label: "AI & workflow automation" },
   { value: "cloud-devops", label: "Cloud & DevOps reliability" },
   { value: "modernization", label: "Modernization & full-stack" },
+  { value: "web-development", label: "Web development & digital presence" },
   { value: "not-sure", label: "Not sure yet" },
 ];
 

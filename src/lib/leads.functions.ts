@@ -5,7 +5,7 @@ export const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Enter a valid email address").max(255),
   company: z.string().trim().max(120).optional().or(z.literal("")),
-  interest: z.enum(["ai-automation", "cloud-devops", "modernization", "not-sure"]),
+  interest: z.enum(["ai-automation", "cloud-devops", "modernization", "web-development", "not-sure"]),
   message: z.string().trim().min(10, "Tell us a little more (10+ characters)").max(2000),
 });
 
