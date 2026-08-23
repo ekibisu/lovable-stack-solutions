@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as CaseStudiesClaimsPlatformModernizationRouteImport } from './routes/case-studies.claims-platform-modernization'
 import { Route as CaseStudiesCloudMigrationRouteImport } from './routes/case-studies.cloud-migration'
 import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
 import { Route as ServicesAiAutomationRouteImport } from './routes/services.ai-automation'
@@ -40,6 +41,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesClaimsPlatformModernizationRoute =
+  CaseStudiesClaimsPlatformModernizationRouteImport.update({
+    id: '/case-studies/claims-platform-modernization',
+    path: '/case-studies/claims-platform-modernization',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CaseStudiesCloudMigrationRoute =
   CaseStudiesCloudMigrationRouteImport.update({
     id: '/case-studies/cloud-migration',
@@ -78,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
@@ -90,6 +98,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
@@ -103,6 +112,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
   '/services/ai-automation': typeof ServicesAiAutomationRoute
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
@@ -141,6 +153,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
     | '/services/ai-automation'
@@ -154,6 +167,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CaseStudiesClaimsPlatformModernizationRoute: typeof CaseStudiesClaimsPlatformModernizationRoute
   CaseStudiesCloudMigrationRoute: typeof CaseStudiesCloudMigrationRoute
   CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
   ServicesAiAutomationRoute: typeof ServicesAiAutomationRoute
@@ -190,6 +204,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/claims-platform-modernization': {
+      id: '/case-studies/claims-platform-modernization'
+      path: '/case-studies/claims-platform-modernization'
+      fullPath: '/case-studies/claims-platform-modernization'
+      preLoaderRoute: typeof CaseStudiesClaimsPlatformModernizationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/cloud-migration': {
@@ -242,6 +263,8 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CaseStudiesClaimsPlatformModernizationRoute:
+    CaseStudiesClaimsPlatformModernizationRoute,
   CaseStudiesCloudMigrationRoute: CaseStudiesCloudMigrationRoute,
   CaseStudiesInvoiceAutomationRoute: CaseStudiesInvoiceAutomationRoute,
   ServicesAiAutomationRoute: ServicesAiAutomationRoute,
