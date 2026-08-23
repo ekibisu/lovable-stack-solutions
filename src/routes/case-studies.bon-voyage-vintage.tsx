@@ -111,7 +111,7 @@ function CaseStudy() {
             <Benefit
               num="03"
               title="One-of-one inventory & Representative Looks"
-              body="Single-quantity items behave correctly across both locations — one shared catalog, reservable, with cross-store lookup. Pieces that can't be reordered get \"Representative Looks\" so the shop can market a style without implying restock."
+              body={'Single-quantity items behave correctly across both locations — one shared catalog, reservable, with cross-store lookup. Pieces that can\'t be reordered get "Representative Looks" so the shop can market a style without implying restock.'}
             />
             <Benefit
               num="04"
