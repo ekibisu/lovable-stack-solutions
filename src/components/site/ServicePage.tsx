@@ -52,6 +52,13 @@ export function ServicePage({ data }: { data: ServicePageData }) {
         <Wrap>
           <SectionHead eyebrow={data.caseStudy.eyebrow} title={data.caseStudy.title} />
           <ThreeColumnStory items={data.caseStudy.items} />
+          {data.caseStudy.link ? (
+            <div className="mt-9">
+              <ButtonLink to={data.caseStudy.link.to} variant="ghost">
+                {data.caseStudy.link.label}
+              </ButtonLink>
+            </div>
+          ) : null}
         </Wrap>
       </Section>
 
