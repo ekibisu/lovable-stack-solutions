@@ -41,19 +41,25 @@ export const engagements = [
   {
     num: "Shape 01",
     title: "Automation assessment — 2 weeks",
-    body: "We map one manual process end to end, prototype the extraction, and hand you a build estimate with an honest go/no-go. Starts at $8k, credited against the build.",
+    body: "We map one manual process end to end, prototype the extraction, and hand you a build estimate with an honest go/no-go. A fixed two-week engagement, credited against the build if you move forward.",
   },
   {
     num: "Shape 02",
     title: "Reliability review — 30/60/90 plan",
-    body: "Architecture, security, IaC, CI/CD, and cost reviewed, then ranked by impact into a plan your team can execute. Starts at $12k.",
+    body: "Architecture, security, IaC, CI/CD, and cost reviewed, then ranked by impact into a plan your team can execute. A fixed-scope review, typically wrapped inside three weeks.",
   },
   {
     num: "Shape 03",
     title: "Phased build & modernization",
-    body: "Monthly engagement for the actual work: pipelines, migrations, services, front ends. Scoped in shippable phases, typically $18k–$40k/month.",
+    body: "Monthly engagement for the actual work: pipelines, migrations, services, front ends. Scoped in shippable phases, each one estimated and approved before it starts.",
+  },
+  {
+    num: "Shape 04",
+    title: "Web presence build — phased launch",
+    body: "A public site and the internet-facing tools behind it, launched in phases — starting with what customers see first, with reservations, inventory, or booking added once the foundation is live. Each phase estimated and approved before it starts.",
   },
 ] as const;
+
 
 export const engagementSteps = [
   {
