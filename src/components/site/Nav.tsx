@@ -17,7 +17,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
     <Link
       to="/"
       aria-label={site.name}
-      className={`flex items-center gap-2.5 font-mono ${onDark ? "text-paper" : "text-ink"}`}
+      className={`flex shrink-0 items-center gap-2.5 whitespace-nowrap font-mono ${onDark ? "text-paper" : "text-ink"}`}
     >
       <Mark onDark={onDark} />
       <span className="flex flex-col leading-none">
@@ -33,7 +33,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
 }
 
 const navLink =
-  "relative py-1 text-[15px] font-medium text-ink-2 transition-colors hover:text-markup after:absolute after:inset-x-0 after:-bottom-1 after:h-[1.5px] after:bg-markup after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-100";
+  "relative whitespace-nowrap py-1 text-[15px] font-medium text-ink-2 transition-colors hover:text-markup after:absolute after:inset-x-0 after:-bottom-1 after:h-[1.5px] after:bg-markup after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-100";
 const navLinkActive = "text-markup after:opacity-100";
 
 export function Nav() {
@@ -49,7 +49,7 @@ export function Nav() {
     <header className="sticky top-0 z-20 border-b border-paper-2 bg-paper/95 backdrop-blur-sm">
       <Wrap className="flex h-20 items-center justify-between">
         <Logo />
-        <div className="flex items-center">
+        <div className="flex shrink-0 items-center">
           <span aria-hidden className="mx-12 hidden h-8 w-px bg-paper-2 xl:block" />
           <nav aria-label="Main" className="hidden items-center gap-8 xl:flex">
             {links.map((link) => (
