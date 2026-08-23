@@ -196,22 +196,33 @@ function Index() {
 
       <Section>
         <Wrap>
-          <SectionHead eyebrow="Who we work with" title="Operations-heavy, regulated, or both." />
-          <div className="grid gap-7 md:grid-cols-2">
+          <SectionHead
+            eyebrow="Who we work with"
+            title="Operations-heavy, regulated, or built around walk-in customers."
+          />
+          <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             <div className="corners border border-paper-2 p-8">
               <Eyebrow>Primary</Eyebrow>
               <h3 className="mb-2 text-[19px]">Logistics &amp; operations</h3>
               <p className="text-muted">
-                Freight, transportation, and warehousing teams buried in invoices, bills of lading,
-                and weigh tickets that still get keyed in by hand.
+                Freight, transportation, warehousing, and similar high-volume operations still
+                buried in invoices, bills of lading, and paperwork that gets keyed in by hand.
               </p>
             </div>
             <div className="corners border border-paper-2 p-8">
               <Eyebrow>Primary</Eyebrow>
               <h3 className="mb-2 text-[19px]">Healthcare &amp; regulated compliance</h3>
               <p className="text-muted">
-                Payer and provider platforms that need to modernize without risking uptime, audit
-                trails, or transaction volume.
+                Payer, provider, and insurance platforms that need to modernize without risking
+                uptime, audit trails, or transaction volume.
+              </p>
+            </div>
+            <div className="corners border border-paper-2 p-8">
+              <Eyebrow>Also a strong fit</Eyebrow>
+              <h3 className="mb-2 text-[19px]">Local &amp; consumer-facing businesses</h3>
+              <p className="text-muted">
+                Retail shops, markets, and event businesses that need a real digital presence and
+                back-office tooling, without turning staff into full-time data-entry clerks.
               </p>
             </div>
           </div>
