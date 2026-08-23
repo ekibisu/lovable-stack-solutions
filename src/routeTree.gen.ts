@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as CaseStudiesBonVoyageVintageRouteImport } from './routes/case-studies.bon-voyage-vintage'
 import { Route as CaseStudiesClaimsPlatformModernizationRouteImport } from './routes/case-studies.claims-platform-modernization'
 import { Route as CaseStudiesCloudMigrationRouteImport } from './routes/case-studies.cloud-migration'
 import { Route as CaseStudiesInvoiceAutomationRouteImport } from './routes/case-studies.invoice-automation'
@@ -41,6 +42,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesBonVoyageVintageRoute =
+  CaseStudiesBonVoyageVintageRouteImport.update({
+    id: '/case-studies/bon-voyage-vintage',
+    path: '/case-studies/bon-voyage-vintage',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CaseStudiesClaimsPlatformModernizationRoute =
   CaseStudiesClaimsPlatformModernizationRouteImport.update({
     id: '/case-studies/claims-platform-modernization',
@@ -85,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/bon-voyage-vintage': typeof CaseStudiesBonVoyageVintageRoute
   '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
@@ -98,6 +106,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/bon-voyage-vintage': typeof CaseStudiesBonVoyageVintageRoute
   '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
@@ -112,6 +121,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/case-studies/bon-voyage-vintage': typeof CaseStudiesBonVoyageVintageRoute
   '/case-studies/claims-platform-modernization': typeof CaseStudiesClaimsPlatformModernizationRoute
   '/case-studies/cloud-migration': typeof CaseStudiesCloudMigrationRoute
   '/case-studies/invoice-automation': typeof CaseStudiesInvoiceAutomationRoute
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/bon-voyage-vintage'
     | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/bon-voyage-vintage'
     | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
@@ -153,6 +165,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/sitemap.xml'
+    | '/case-studies/bon-voyage-vintage'
     | '/case-studies/claims-platform-modernization'
     | '/case-studies/cloud-migration'
     | '/case-studies/invoice-automation'
@@ -167,6 +180,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CaseStudiesBonVoyageVintageRoute: typeof CaseStudiesBonVoyageVintageRoute
   CaseStudiesClaimsPlatformModernizationRoute: typeof CaseStudiesClaimsPlatformModernizationRoute
   CaseStudiesCloudMigrationRoute: typeof CaseStudiesCloudMigrationRoute
   CaseStudiesInvoiceAutomationRoute: typeof CaseStudiesInvoiceAutomationRoute
@@ -204,6 +218,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/bon-voyage-vintage': {
+      id: '/case-studies/bon-voyage-vintage'
+      path: '/case-studies/bon-voyage-vintage'
+      fullPath: '/case-studies/bon-voyage-vintage'
+      preLoaderRoute: typeof CaseStudiesBonVoyageVintageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/claims-platform-modernization': {
@@ -263,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CaseStudiesBonVoyageVintageRoute: CaseStudiesBonVoyageVintageRoute,
   CaseStudiesClaimsPlatformModernizationRoute:
     CaseStudiesClaimsPlatformModernizationRoute,
   CaseStudiesCloudMigrationRoute: CaseStudiesCloudMigrationRoute,

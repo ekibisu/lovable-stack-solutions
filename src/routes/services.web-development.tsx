@@ -78,6 +78,7 @@ const data: ServicePageData = {
         body: "A live storefront and staff tooling at both locations, one-of-one inventory discoverable and reservable, the brand name reclaimed in search, and AI plus hosting costs measured in a few dollars a month.",
       },
     ],
+    link: { to: "/case-studies/bon-voyage-vintage", label: "Read the full case study" },
   },
   stats: [
     { value: "2 → 1", label: "Shops, one shared catalog" },
