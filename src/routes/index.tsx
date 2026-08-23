@@ -114,8 +114,8 @@ function Index() {
 
       <Section>
         <Wrap>
-          <SectionHead eyebrow="What we do" title="Three problems, one accountable team." />
-          <div className="grid gap-9 md:grid-cols-3">
+          <SectionHead eyebrow="What we do" title="Four problems, one accountable team." />
+          <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-4">
             <Benefit
               num="01"
               title="Automate operational workflows"
@@ -130,6 +130,11 @@ function Index() {
               num="03"
               title="Deploy with confidence"
               body="Secure cloud infrastructure, CI/CD pipelines, monitoring, and infrastructure-as-code, so releases stop being an event."
+            />
+            <Benefit
+              num="04"
+              title="Build a real web presence"
+              body="A public site and the internet-facing tools behind it, built around how the business actually runs, not a template."
             />
           </div>
         </Wrap>
