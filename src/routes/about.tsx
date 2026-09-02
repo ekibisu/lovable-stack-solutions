@@ -150,7 +150,7 @@ function About() {
       <CtaBand
         eyebrow="Next step"
         title="Start with one real process and a 30-minute call."
-        body={`Prefer email? Reach us directly at ${site.email}.`}
+        body={`Prefer email or phone? Reach us directly at ${site.email} or ${site.phone}.`}
       />
     </>
   );
