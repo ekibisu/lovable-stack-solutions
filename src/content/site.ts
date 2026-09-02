@@ -2,6 +2,8 @@ export const site = {
   name: "JABS Technical Consulting",
   short: "JABS TECHNICAL CONSULTING",
   email: "hello@jabstechnicalconsulting.com",
+  phone: "507.351.0256",
+  phoneHref: "+15073510256",
   tagline:
     "We eliminate manual operations work and modernize legacy systems for operations-heavy and regulated businesses — from enterprise logistics, healthcare, and finance platforms to local shops and field-service trades. 80% less manual invoice entry, proven in production.",
 } as const;

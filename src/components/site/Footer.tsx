@@ -64,9 +64,15 @@ export function Footer() {
             </h2>
             <a
               href={`mailto:${site.email}`}
-              className="mb-4 block text-sm text-muted-dark transition-colors hover:text-paper"
+              className="mb-2 block text-sm text-muted-dark transition-colors hover:text-paper"
             >
               {site.email}
+            </a>
+            <a
+              href={`tel:${site.phoneHref}`}
+              className="mb-4 block text-sm text-muted-dark transition-colors hover:text-paper"
+            >
+              {site.phone}
             </a>
             <Link to="/contact" className={btnClass("onDark")}>
               Book a 30-min call
@@ -90,9 +96,14 @@ export function Footer() {
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-2.5 border-t border-ink-3 pt-6 font-mono text-xs text-muted-dark">
           <span>© {new Date().getFullYear()} {site.name}, Inc.</span>
-          <a href={`mailto:${site.email}`} className="hover:text-paper">
-            {site.email}
-          </a>
+          <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href={`mailto:${site.email}`} className="hover:text-paper">
+              {site.email}
+            </a>
+            <a href={`tel:${site.phoneHref}`} className="hover:text-paper">
+              {site.phone}
+            </a>
+          </span>
         </div>
       </Wrap>
     </footer>

@@ -100,6 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: site.name,
           description: site.tagline,
           email: site.email,
+          telephone: site.phone,
           url: "https://jabstechnicalconsulting.com",
           areaServed: "US",
         }),
