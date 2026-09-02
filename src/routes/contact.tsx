@@ -161,7 +161,7 @@ function Contact() {
 
                   {mutation.isError ? (
                     <p className="border border-markup/40 bg-markup/5 px-3.5 py-2.5 font-mono text-[12px] text-markup">
-                      Something went wrong sending that. Please email {site.email} instead.
+                      Something went wrong sending that. Please email {site.email} or call {site.phone} instead.
                     </p>
                   ) : null}
 
