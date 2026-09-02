@@ -96,9 +96,14 @@ export function Footer() {
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-2.5 border-t border-ink-3 pt-6 font-mono text-xs text-muted-dark">
           <span>© {new Date().getFullYear()} {site.name}, Inc.</span>
-          <a href={`mailto:${site.email}`} className="hover:text-paper">
-            {site.email}
-          </a>
+          <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href={`mailto:${site.email}`} className="hover:text-paper">
+              {site.email}
+            </a>
+            <a href={`tel:${site.phoneHref}`} className="hover:text-paper">
+              {site.phone}
+            </a>
+          </span>
         </div>
       </Wrap>
     </footer>
