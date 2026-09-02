@@ -64,9 +64,15 @@ export function Footer() {
             </h2>
             <a
               href={`mailto:${site.email}`}
-              className="mb-4 block text-sm text-muted-dark transition-colors hover:text-paper"
+              className="mb-2 block text-sm text-muted-dark transition-colors hover:text-paper"
             >
               {site.email}
+            </a>
+            <a
+              href={`tel:${site.phoneHref}`}
+              className="mb-4 block text-sm text-muted-dark transition-colors hover:text-paper"
+            >
+              {site.phone}
             </a>
             <Link to="/contact" className={btnClass("onDark")}>
               Book a 30-min call
