@@ -192,8 +192,11 @@ function Contact() {
             </div>
             <div className="corners mt-9 border border-line-soft p-6">
               <span className={labelClass}>Direct</span>
-              <a className="font-mono text-[15px] text-markup underline" href={`mailto:${site.email}`}>
+              <a className="block font-mono text-[15px] text-markup underline" href={`mailto:${site.email}`}>
                 {site.email}
+              </a>
+              <a className="mt-2 block font-mono text-[15px] text-markup underline" href={`tel:${site.phoneHref}`}>
+                {site.phone}
               </a>
             </div>
           </div>
